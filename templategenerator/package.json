@@ -10,16 +10,11 @@
 		"Other"
 	],
 	"activationEvents": [
-        "onCommand:templategenerator.helloWorld",
         "onCommand:templategenerator.createFolder"
 	],
 	"main": "./out/extension.js",
 	"contributes": {
 		"commands": [
-			{
-				"command": "templategenerator.helloWorld",
-				"title": "Hello World"
-			},
 			{
 				"command": "templategenerator.createFolder",
 				"title": "New Folder From Template"
@@ -27,10 +22,6 @@
 		],
 		"menus": {
 			"explorer/context": [
-				{
-					"command": "templategenerator.helloWorld",
-					"group": "2_workspace"
-				},
 				{
 					"command": "templategenerator.createFolder",
 					"group": "2_workspace"

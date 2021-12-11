@@ -24,10 +24,6 @@ interface Template {
 // this method is called when your extension is activated
 // your extension is activated the very first time the command is executed
 export function activate(context: vscode.ExtensionContext) {
-	const helloWord = vscode.commands.registerCommand('templategenerator.helloWorld', () => {
-		vscode.window.showInformationMessage('Hello World from TemplateGenerator!');
-	});
-
 	const generateNewFolder = vscode.commands.registerCommand("templategenerator.createFolder", async (uri: vscode.Uri) => {
 		const templateFiles = await vscode.workspace.findFiles("**/.vscode/fileTemplates.json");
 		const templateOptionsFile = templateFiles[0].fsPath;
@@ -41,7 +37,7 @@ export function activate(context: vscode.ExtensionContext) {
 				return vscode.window.showInformationMessage("An Error occurred reading the json file");
 			}
 			const templateOptions = JSON.parse(data);
-			
+
 			const userOptions = templateOptions.map((opt: any) => {
 				return opt.templateName;
 			});
@@ -62,7 +58,7 @@ export function activate(context: vscode.ExtensionContext) {
 		
 	});
 
-	context.subscriptions.push(generateNewFolder, helloWord);
+	context.subscriptions.push(generateNewFolder);
 }
 
 // this method is called when your extension is deactivated

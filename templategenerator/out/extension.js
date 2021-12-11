@@ -8,9 +8,6 @@ const vscode = require("vscode");
 // this method is called when your extension is activated
 // your extension is activated the very first time the command is executed
 function activate(context) {
-    const helloWord = vscode.commands.registerCommand('templategenerator.helloWorld', () => {
-        vscode.window.showInformationMessage('Hello World from TemplateGenerator!');
-    });
     const generateNewFolder = vscode.commands.registerCommand("templategenerator.createFolder", async (uri) => {
         const templateFiles = await vscode.workspace.findFiles("**/.vscode/fileTemplates.json");
         const templateOptionsFile = templateFiles[0].fsPath;
@@ -39,7 +36,7 @@ function activate(context) {
             });
         });
     });
-    context.subscriptions.push(generateNewFolder, helloWord);
+    context.subscriptions.push(generateNewFolder);
 }
 exports.activate = activate;
 // this method is called when your extension is deactivated

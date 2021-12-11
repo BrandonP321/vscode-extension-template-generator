@@ -1,0 +1,16 @@
+{
+    "code snippet 1": {
+		"scope": "javascript,typescript,typescriptreact",
+		"prefix": "snip1",
+		"body": [
+			"console.log('snip1');"
+		]
+	},
+    "code snippet 2": {
+		"scope": "javascript,typescript,typescriptreact",
+		"prefix": "snip2",
+		"body": [
+			"console.log('snip1');"
+		]
+	},
+}

@@ -1,0 +1,29 @@
+node_modules/
+.expo/
+npm-debug.*
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+*.orig.*
+web-build/
+server/build
+.yarn/
+# !.yarn/releases
+# !.yarn/plugins
+# !.yarn/patches
+# !.yarn/sdk
+# !.yarn/versions
+.pnp.*
+.yarn/install-state.gz
+
+# macOS
+.DS_Store
+*.gz
+.yarn/
+.env
+env.dev
+env.local
+env.staging
+env.live
